@@ -1,0 +1,41 @@
+import math
+
+def calculadora():
+    print("""Selecione a operação:
+    1 - Soma
+    2 - Subtração
+    3 - Multiplicação
+    4 - Divisão
+    5 - Potenciação
+    6 - Radiciação""")
+
+    operacao = input("Digite a operação (1/2/3/4/5/6): ")
+
+    num1 = float(input("Digite o primeiro número: "))
+    
+    # Para radiciação, só um número é necessário
+    if operacao != '6':
+        num2 = float(input("Digite o segundo número: "))
+
+    if operacao == '1':
+        print(f"{num1} + {num2} = {num1 + num2}")
+    elif operacao == '2':
+        print(f"{num1} - {num2} = {num1 - num2}")
+    elif operacao == '3':
+        print(f"{num1} * {num2} = {num1 * num2}")
+    elif operacao == '4':
+        if num2 != 0:
+            print(f"{num1} / {num2} = {num1 / num2}")
+        else:
+            print("Erro! Divisão por zero.")
+    elif operacao == '5':
+        print(f"{num1} elevado a {num2} = {math.pow(num1, num2)}")
+    elif operacao == '6':
+        if num1 >= 0:
+            print(f"Raiz quadrada de {num1} = {math.sqrt(num1)}")
+        else:
+            print("Erro! Não é possível calcular a raiz quadrada de um número negativo.")
+    else:
+        print("Operação inválida!")
+
+calculadora()
