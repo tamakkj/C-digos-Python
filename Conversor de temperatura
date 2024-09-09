@@ -1,0 +1,49 @@
+def kelvin_para_celsius(k):
+    return k - 273.15
+
+def celsius_para_kelvin(c):
+    return c + 273.15
+
+def fahrenheit_para_kelvin(f):
+    return (f - 32) * 5/9 + 273.15
+
+def kelvin_para_fahrenheit(k):
+    return (k - 273.15) * 9/5 + 32
+
+def celsius_para_fahrenheit(c):
+    return (c * 9/5) + 32
+
+def fahrenheit_para_celsius(f):
+    return (f - 32) * 5/9
+
+# Programa principal
+print("""Escolha a conversão:
+1 - Kelvin para Celsius
+2 - Celsius para Kelvin
+3 - Fahrenheit para Kelvin
+4 - Kelvin para Fahrenheit
+5 - Celsius para Fahrenheit
+6 - Fahrenheit para Celsius""")
+
+escolha = int(input("Digite o número da conversão desejada: "))
+
+if escolha == 1:
+    k = float(input("Digite a temperatura em Kelvin: "))
+    print(f"{k}K é igual a {kelvin_para_celsius(k):.2f}°C")
+elif escolha == 2:
+    c = float(input("Digite a temperatura em Celsius: "))
+    print(f"{c}°C é igual a {celsius_para_kelvin(c):.2f}K")
+elif escolha == 3:
+    f = float(input("Digite a temperatura em Fahrenheit: "))
+    print(f"{f}°F é igual a {fahrenheit_para_kelvin(f):.2f}K")
+elif escolha == 4:
+    k = float(input("Digite a temperatura em Kelvin: "))
+    print(f"{k}K é igual a {kelvin_para_fahrenheit(k):.2f}°F")
+elif escolha == 5:
+    c = float(input("Digite a temperatura em Celsius: "))
+    print(f"{c}°C é igual a {celsius_para_fahrenheit(c):.2f}°F")
+elif escolha == 6:
+    f = float(input("Digite a temperatura em Fahrenheit: "))
+    print(f"{f}°F é igual a {fahrenheit_para_celsius(f):.2f}°C")
+else:
+    print("Escolha inválida!")
